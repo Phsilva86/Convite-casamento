@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Convite - Paulo Henrique & Ana Júlia</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+  <nav class="topbar">
+    <div class="names">Paulo Henrique & Ana Júlia</div>
+    <div class="dots" id="dots"></div>
+  </nav>
+
+  <main id="pages">
+    <!-- Page 1: Abertura -->
+    <section class="page" style="background-image: url('photo1.jpeg');" data-index="0">
+      <div class="overlay">
+        <h1>Paulo Henrique & Ana Júlia</h1>
+        <p class="lead">O amor nos trouxe até aqui.</p>
+        <p class="date">11/09/2027 · 16h</p>
+        <button class="btn" onclick="nextPage()">Ver convite</button>
+      </div>
+    </section>
+
+    <!-- Page 2: Sobre o casal -->
+    <section class="page" style="background-image: url('photo2.jpeg');" data-index="1">
+      <div class="card">
+        <h2>Sobre nós</h2>
+        <p>Vamos celebrar nossa união com familiares e amigos — sua presença é muito importante para nós.</p>
+        <p class="small">Cerimônia e recepção na mesma local.</p>
+      </div>
+    </section>
+
+    <!-- Page 3: Detalhes da cerimônia -->
+    <section class="page" style="background-image: url('photo3.jpeg');" data-index="2">
+      <div class="card">
+        <h2>Detalhes</h2>
+        <p><strong>Local:</strong> Fazenda Paraíso — Buri - SP</p>
+        <p><strong>Data:</strong> 11/09/2027</p>
+        <p><strong>Horário:</strong> 16h</p>
+        <div class="actions">
+          <a class="btn" href="https://maps.app.goo.gl/aofvP4UmLajZzYe17?g_st=ipc" target="_blank" rel="noopener">Abrir no GPS</a>
+          <a class="btn" href="https://wa.me/5514981689120?text=Ol%C3%A1%21%20Confirmo%20minha%20presen%C3%A7a%20no%20casamento%20de%20Paulo%20Henrique%20%26%20Ana%20J%C3%BAlia%20%E2%80%94%2011/09/2027." target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 4: Confirmação por WhatsApp (maior foco) -->
+    <section class="page" style="background-image: url('photo1.jpeg');" data-index="3">
+      <div class="card">
+        <h2>Confirmar presença</h2>
+        <p>Clique no botão abaixo para enviar sua confirmação diretamente pelo WhatsApp.</p>
+        <a class="btn large" href="https://wa.me/5514981689120?text=Ol%C3%A1%21%20Confirmo%20minha%20presen%C3%A7a%20no%20casamento%20de%20Paulo%20Henrique%20%26%20Ana%20J%C3%BAlia%20%E2%80%94%2011/09/2027." target="_blank" rel="noopener">Enviar confirmação via WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Page 5: Lista de presentes -->
+    <section class="page" style="background-image: url('photo2.jpeg');" data-index="4">
+      <div class="card">
+        <h2>Lista de Presentes</h2>
+        <p>Se quiser nos presentear, acesse nossa lista online:</p>
+        <a class="btn" href="https://www.amazon.com.br/?&tag=hydrbrabk-20&ref=pd_sl_7rwd1q78df_e&adgrpid=155790195778&hvpone=&hvptwo=&hvadid=677606588104&hvpos=&hvnetw=g&hvrand=16419518054285946479&hvqmt=e&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9216125&hvtargid=kwd-10573980&hydadcr=26346_11691057&gad_source=1" target="_blank" rel="noopener">Abrir lista de presentes</a>
+      </div>
+    </section>
+
+    <!-- Page 6: Agradecimento -->
+    <section class="page" style="background-image: url('photo3.jpeg');" data-index="5">
+      <div class="overlay">
+        <h2>Obrigado!</h2>
+        <p>Aguardamos você para celebrar esse momento conosco.</p>
+        <p class="small">Paulo Henrique & Ana Júlia · 11/09/2027</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevPage()">◀</button>
+    <div class="pagenum" id="pagenum">1 / 6</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextPage()">▶</button>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

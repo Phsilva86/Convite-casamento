@@ -1,0 +1,49 @@
+/* Simple elegant styles for mobile-first interactive invite */
+
+:root{
+  --accent: #b77a50;
+  --muted: rgba(255,255,255,0.85);
+  --card-bg: rgba(255,255,255,0.95);
+  --glass: rgba(0,0,0,0.45);
+  --radius: 12px;
+  --max-width: 900px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family: 'Helvetica Neue', Arial, sans-serif}
+
+body,html{height:100%;background:#000;color:#111}
+
+.container{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;background:#000}
+
+.topbar{width:100%;max-width:var(--max-width);display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;color:var(--muted)}
+.topbar .names{font-weight:700;}
+.dots{display:flex;gap:6px;align-items:center}
+
+main#pages{width:100%;max-width:var(--max-width);position:relative;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+.page{min-height:65vh;height:65vh;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;position:absolute;inset:0;transition:opacity .6s,transform .6s;opacity:0;transform:scale(.98);padding:24px}
+.page.active{opacity:1;transform:scale(1)}
+.overlay{background:linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.55));color:var(--muted);padding:28px;border-radius:10px;text-align:center;max-width:86%}
+.overlay h1{font-size:28px;margin-bottom:6px;letter-spacing:1px}
+.overlay h2{font-size:22px;margin-bottom:8px}
+.lead{font-size:18px;margin-bottom:8px}
+.date{font-weight:600;margin-top:6px}
+
+.card{background:var(--card-bg);padding:18px;border-radius:12px;max-width:92%;color:#222;text-align:left;box-shadow:0 6px 20px rgba(0,0,0,0.12)}
+.card h2{margin-bottom:8px;color:#111}
+.card p{margin-bottom:10px;line-height:1.4}
+.small{font-size:13px;color:#555;margin-top:10px}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;background:var(--accent);color:#fff;font-weight:600;box-shadow:0 6px 16px rgba(183,122,80,0.18)}
+.btn.large{padding:14px 18px;font-size:16px}
+
+.controls{width:100%;max-width:var(--max-width);display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.nav-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:10px;color:var(--muted);font-size:18px}
+.pagenum{color:var(--muted)}
+
+@media(min-width:800px){
+  .page{height:75vh}
+  .overlay h1{font-size:36px}
+  .card{max-width:60%}
+}
